@@ -1,0 +1,150 @@
+*{
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: white;
+}
+
+nav {
+	position: fixed;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	height: 100%;
+	width: 100px;
+	background: #DBF1BC;
+	z-index: 1;
+}
+
+nav ul li {
+	text-align: center;
+	padding: 15px;
+}
+
+nav ul li:hover{
+	background: #CCDFB0;
+}
+
+#sidebar1 {
+	position: absolute;
+	left: 1;
+	bottom: 0;
+}
+
+#heading{
+	position: sticky;
+	color: #757E68;
+	font-size: 50px;
+	text-align: left;
+	padding: 170px;
+	width: 100%;
+	background-color:#E2F6C4;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 50px;
+}
+
+header p {
+	font-size: 23px;
+	font-family: Sans Serif;
+	text-align: left;
+	padding-left: 3px;
+}
+header .logo {
+	position: relative;
+	padding-right: 70px;
+	float: right;
+	z-index: 4;
+}
+
+h2 {
+	font-size: 40px;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+section {
+	
+}
+
+section p {
+	position: sticky;
+	text-align: center;
+	font-size: 20px;
+	border-style: none;
+	border-radius: 25px;
+	padding: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 150px;
+	width: 800px;
+	background-color: #E2F6C4;
+}
+
+section p span {
+	font-weight: bold;
+}
+
+article {
+	position: sticky;
+	text-align: center;
+	font-size: 20px;
+	text-align: center;
+	border-style: none;
+	border-radius: 25px;
+	padding: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 150px;
+	width: 800px;
+	background-color: #E2F6C4;
+}
+
+article p {
+	font-size: 18px;
+}
+#facebook {
+	position: relative;
+	right: 100px;
+	background: url('../images/sprite.png') no-repeat 0 -110px;
+	width: 100px;
+	height: 100px;
+}
+#facebook:hover {
+	background: url('../images/sprite.png') no-repeat 0 0;
+	width: 100px;
+	height: 100px;
+}
+#twitter {
+	position: relative;
+	bottom: 100px;
+	left: 110px;
+	background: url('../images/sprite.png') no-repeat -105px -110px;
+	width: 100px;
+	height: 100px;
+}
+#twitter:hover {
+	background: url('../images/sprite.png') no-repeat -105px 0;
+	width: 100px;
+	height: 100px;
+}
+footer {
+	width: 100%;
+	clear:both;
+	background-color:#E2F6C4;
+	z-index: -1;
+}
+
+footer p {
+	text-align: center;
+}	
