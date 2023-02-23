@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="FA 9">
+	<meta name="author" content="Kriztyl Sumaya">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Second Page</title>
+</head>
+<body>
+	<h1>Welcome to koYANGi!</h1>
+	<button onclick="replaceImage()"><---------</button>
+	<button onclick="origImage()">-----------></button>
+	<br>
+	<br>
+	<img id="firstImage" src="jw_charisma.jfif" alt="Original Image">
+	<br>
+	<p></p>
+	<script>
+		function replaceImage() {
+			document.getElementById("firstImage").src = "jw_happy.jfif";
+		}
+
+		function origImage() {
+			document.getElementById("firstImage").src = "jw_charisma.jfif";
+		}
+	</script>
+</body>
+</html>
