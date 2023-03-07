@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="FA 10">
+		<meta name="author" content="Kriztyl Sumaya">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body onload="random()">
+		<h1>Breaking Down A Randomly Generated Number: </h1>
+		<div>
+			<p id="randomNumber"></p>
+			<p id="randomBreakdown"></p>
+		</div>
+		<script>
+		var k;
+		var v;
+		var name;
+		
+		function random() {
+			k = Math.floor(Math.random()*1001);
+			v = String(k).split('');
+			
+			document.getElementById("randomNumber").innerHTML = "Randomly Generated Number: " + k;
+			document.getElementById("randomBreakdown").innerHTML = "Breakdown: " + v.slice(-3, -2)*100 + ", " + v.slice(-2, -1)*10 + ", " + v.slice(-1)*1;
+		}
+		</script>
+	</body>
+</html>
