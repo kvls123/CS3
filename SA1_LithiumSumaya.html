@@ -44,19 +44,19 @@
             }
 			
 			function random (){ //defines the function random() that will randomly change the face from H to T or from T to H or from H to H or from T to T each time.
-				var coin = Math.floor(Math.random() * 2); // randomizes numbers 0 to 1 only
+				var coin = Math.floor(Math.random() * 2); // randomizes numbers (0 to 1 only)
 				if (coin == 0) { // conditional statement
-					document.getElementById("coin").innerHTML = "H";
-					coin = "H";
+					document.getElementById("coin").innerHTML = "H"; //if the randomized number is 0 then it will show H for Heads
+					coin = "H"; // converts the numerical value (0) into H
 				} else {
-					document.getElementById("coin").innerHTML = "T";
-					coin = "T";
+					document.getElementById("coin").innerHTML = "T"; //if the randomized number is 1 then it will show T for Tails
+					coin = "T"; // converts the numerical value (1) into T
 				}
-				// c
+				// conditional statement to alert the user whether their guess is correct or not
 				if (uGuess == coin) {
-					alert("Correct");
+					alert("Correct"); // to alert the user in a dialogue box
 				} else {
-					alert("Incorrect");
+					alert("Incorrect"); // to alert the user in a dialogue box
 				}
 				
 			}
