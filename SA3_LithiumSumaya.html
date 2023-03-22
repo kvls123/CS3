@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Choose Background Color</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="SA 3">
+		<meta name="author" content="Kriztyl Sumaya">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	* { box-sizing: border-box; 
+            	font-family: arial; 
+                color: white;
+            }           
+            body {background:navy}
+            ul {
+            	list-style-type: none;
+                width: 100px;
+                padding: 0;
+                border: 1px solid black;
+                background: gray;
+            }
+            li {width: 100%;
+            	border-bottom: 1px solid black;
+                padding: 5px;
+            }
+            li:nth-child(3) {border:none}
+            a {	text-decoration:none;
+            	display:block;
+                width: 100%;
+            }
+            li:nth-child(1):hover {background:purple}
+            li:nth-child(2):hover {background:navy}
+            li:nth-child(3):hover {background:maroon}
+            
+        </style>
+
+	</head>
+	<body>
+		<h2> Choose Background Color </h2>
+        <ul>
+        	<li onclick="backgroundColor('purple')"><a href="#"> Purple </a></li>
+            <li  onclick="backgroundColor('navy')"><a href="#"> Navy </a></li>
+            <li onclick="backgroundColor('maroon')"><a href="#"> Maroon </a></li>
+        </ul>
+		
+
+        <script>
+            /* do not forget to include comments to this script */
+           function backgroundColor(bgColor) { // defines the function backgroundColor() with an attribute (color)
+				document.body.style.background = bgColor; //sets the background color in the body to either purple, navy, maroon whenever the buttons are clicked
+		   }
+
+        </script>
+	</body>
+</html>
