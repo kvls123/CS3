@@ -28,13 +28,13 @@
 		function fortuneStart() { // defines the function fortuneStart()
 		var name = prompt("Enter your Full Name: ", "");  // prompts the user to enter their name
 			document.getElementById("thename").innerHTML = name; // displays it inside the span with id=”thename”.
-		var nameLength = name.length; // counts the number of characters (including spaces and special characters) in the entered name
-		if (nameLength != nameLength % 10) { // loop structure and its condition
-			nameLength = (nameLength % 10) + ((nameLength - nameLength % 10)/10); // converts the number of characters entered by the user to a single digit
+		var nLength = name.length; // counts the number of characters (including spaces and special characters) in the entered name
+		if (nLength != nLength % 10) { // loop structure and its condition
+			nLength = (nLength % 10) + ((nLength - nLength % 10)/10); // converts the number of characters entered by the user to a single digit
 		}
 
 		var fortune = ""; 
-		switch (nameLength) { //10 fortunes that will correspond to the numerology digit.
+		switch (nLength) { //10 fortunes that will correspond to the numerology digit.
 			case 0: 
 				fortune = "A fresh start will put you on your way.";
 				break;
