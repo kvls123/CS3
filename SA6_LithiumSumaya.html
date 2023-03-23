@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="SA 6">
+		<meta name="author" content="Kriztyl Sumaya">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body onload="randomPin()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="#" onclick="newPin()"> New OTP </a></h2>
+    <button onclick="enterOTP()" id="enter"> Enter the OTP as shown above </button>
+    
+    <script>
+    	/* do not forget to include comments in your answer */
+		function randomPin() {
+			var numbers = "9876543210"; //where the random digits from (0-9 only).
+			pin = "";
+			for (i=0; i<6; i++) {
+				pin += numbers [Math.floor(Math.random()*10)]; // generates the random 6-digit OTP.
+			}
+			return pin; // returns the pin
+		}	
+		otp.innerHTML = randomPin(); //
+		
+		function newPin() { // calls the function randomPin()
+			otp.innerHTML = randomPin();
+		}
+		
+		function enterOTP() { // defines a function that checks if the pin shown and the pin entered is correct. 
+			var enterPin = prompt ("Please enter the OTP:");
+			if (pin == enterPin) { //if the pin entered is correct it opens a window.
+				window.open("https://www.messenger.com/")
+			} else { //if the pin entered is incorrect it alerts the user that their input is incorrect.
+				alert("Incorrect Input!");
+				otp.innerHTML = randomPin();
+			}
+		}
+    </script>
+</body>
+</html>
+
