@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="SA 7">
+		<meta name="author" content="Kriztyl Sumaya">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick="fortuneStart()"> Click here to enter your name </button>
+     <script>
+    	/* do not forget to include comments in your answer */
+		function fortuneStart() { // defines the function fortuneStart()
+		var name = prompt("Enter your Full Name: ", "");  // prompts the user to enter their name
+			document.getElementById("thename").innerHTML = name; // displays it inside the span with id=”thename”.
+		var nameLength = name.length; // counts the number of characters (including spaces and special characters) in the entered name
+		if (nameLength != nameLength % 10) { // loop structure and its condition
+			nameLength = (nameLength % 10) + ((nameLength - nameLength % 10)/10); // converts the number of characters entered by the user to a single digit
+		}
+
+		var fortune = ""; 
+		switch (nameLength) { //10 fortunes that will correspond to the numerology digit.
+			case 0: 
+				fortune = "A fresh start will put you on your way.";
+				break;
+			case 1: 
+				fortune = "Be mindful of those who are close to you";
+				break;
+			case 2: 
+				fortune = "The harder you work, the luckier you get.";
+				break;
+			case 3: 
+				fortune = "You will find someone who can hold your hand forever.";
+				break;
+			case 4: 
+				fortune = "Take the chance while you still have the choice.";
+				break;
+			case 5: 
+				fortune = "Cupid is on your side!";
+				break;
+			case 6: 
+				fortune = "You will be hungry in a hour.";
+				break;
+			case 7: 
+				fortune = "All will be well.";
+				break;
+			case 8: 
+				fortune = "Do not trust anyone.";
+				break;
+			case 9: 
+				fortune = "It's a good time for studying.";
+				break;
+			default:
+				fortune = "You are lucky!";
+			}
+			document.getElementById("fortune").innerHTML = fortune; // displays the fortune statement inside span with an id="fortune"
+		}
+    </script>
+    
+</body>
+</html>
