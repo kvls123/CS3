@@ -29,7 +29,7 @@
 		var name = prompt("Enter your Full Name: ", "");  // prompts the user to enter their name
 			document.getElementById("thename").innerHTML = name; // displays it inside the span with id=”thename”.
 		var nLength = name.length; // counts the number of characters (including spaces and special characters) in the entered name
-		if (nLength != nLength % 10) { // loop structure and its condition
+		while (nLength != nLength % 10) { // loop structure and its condition
 			nLength = (nLength % 10) + ((nLength - nLength % 10)/10); // converts the number of characters entered by the user to a single digit
 		}
 
