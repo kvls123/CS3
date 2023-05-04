@@ -10,14 +10,14 @@
 		
 <body>
 	<script>
-		var mRNA = prompt("Enter mRNA Sequence: ").toUpperCase;
-		var codon= "",
-			aminoAcid= "";
-		var condonArray = [],
+		var mRNA = prompt ("Please Enter mRNA Sequence: ");
+		var codon = "",
+			aminoAcid = "";
+		var codonArray = [],
 			acidArray = [];
 		var start = mRNA.indexOf("AUG");
-		
-		if  (start == -1) {
+
+        if  (start == -1) {
 			document.write ("Start codon not found.")
 		} else {
 			var mRNASlice = mRNA.slice(start), i = 0;
@@ -149,8 +149,8 @@
 			}
 			var codonNew = codonArray.map(codon => `"${codon}"`);
 			var acidNew = acidArray.map((aminoAcid, index) => `${codonArray[index]} --> ${aminoAcid}`);
-            document.write("[" + codonNew.join(", ") + "]");
-			document.write('<br>' + acidNew.join('<br>'));
+            		document.write("[" + codonNew.join(", ") + "]");
+			document.write('<br>' + acidNew.join('<br>')); 
 		}
 			
 			 
