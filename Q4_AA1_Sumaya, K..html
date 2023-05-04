@@ -149,7 +149,7 @@
 			}
 			var codonNew = codonArray.map(codon => `"${codon}"`);
 			var acidNew = acidArray.map((aminoAcid, index) => `${codonArray[index]} --> ${aminoAcid}`);
-            document.write("[" + codonNew.join(", ") + "]");
+           		document.write("[" + codonNew.join(", ") + "]");
 			document.write('<br>' + acidNew.join('<br>')); 
 		}
 			
