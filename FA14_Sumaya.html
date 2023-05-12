@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Interactive Sign-Up: Formative Assessment 14</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="FA 14">
+		<meta name="author" content="Kriztyl Sumaya">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<style>  
+	body{  
+		font-family: Calibri, Helvetica, sans-serif;  
+		background-color: #A9B0CC;  
+		margin: 100px;
+	}  
+	
+	#signupH1 {
+		text-align: center;
+		font-size: 50px;
+		margin-bottom: 100px;
+	}
+	
+	#signupForm {  
+		padding: 50px;  
+		background-color: #C8D0EF; 
+		border-radius: 25px;
+	}  
+	fieldset {
+		border: none;
+		margin: none;
+		padding: none;
+	}
+	legend {
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		margin-bottom: 35px;
+	}
+	
+	hr {  
+		border: 1px solid white;
+		margin: 10px 0px 30px 0px;  
+	}  
+	
+	label {
+		font-size: 17px;
+		font-weight: bold;
+		padding-left: 5px;
+	}
+
+	#firstname, #lastname, #email, #username, #password, #address, textarea, #gender {  
+		border: none;  
+		background: #D6DBF1;  
+		border-radius: 10px;
+		width: 100%;  
+		padding: 15px;  
+		margin: 5px 0 22px 0;  
+		display: inline-block;  
+	}  
+
+	
+	#submit {  
+		background-color: #A0ADDF;
+		border: none;  
+		border-radius: 50px;
+		text-align: center;		
+		color: white;  
+		font-size: 15px;
+		padding: 15px 20px;  
+		margin: 10px 10px;  
+		width: 45%;   
+		float: left;
+		cursor: pointer;  
+	}
+	
+	#reset {  
+		background-color: #A0ADDF;
+		text-align: center;
+		color: white;  
+		font-size: 15px;
+		padding: 15px 20px;  
+		margin: 10px 10px;  
+		border: none;  
+		border-radius: 50px;
+		width: 45%;  
+		position: relative;
+		left: 50px;
+		cursor: pointer;  
+	}  
+	
+	#submit:hover, #reset:hover {  
+		background-color: #B2BBDD;  
+	}  
+	
+	#userInfo {
+        padding: 50px;  
+		background-color: #C8D0EF; 
+		border-radius: 25px;
+	}
+
+	#output {
+		font-size: 15px;
+		font-weight: light;
+	}
+	</style> 
+	</head>
+<body>
+	<h1 id="signupH1">Interactive Sign-Up</h1>
+		<form id="signupForm" onsubmit = "return false">
+			<fieldset>
+				<legend>To Proceed, Please Sign-up:</legend>
+				<hr>
+				<div id="content">
+				<label for="firstname">First Name:</label>
+					<input id="firstname" type="text" name="" placeholder="First name" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+					
+				<label for="lastname">Last Name:</label>
+					<input id="lastname" type="text" name="" placeholder="Last name" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+					
+				<label for="email">Email:</label>
+					<input id="email" type="email" name="" placeholder="Email" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+					
+				<label for="username">Username:</label>
+					<input id="username" type="text" name="" placeholder="Username" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+					
+				<label for="password">Password:</label>
+					<input id="password" type="password" name="" placeholder="Password" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+					
+				<label for="address">Address:</label>
+					<input id="address" type="text" name="" placeholder="Address" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>	
+					
+				<label for="paragraph">What are you interested in? Please write a short paragraph.</p>
+					<textarea id="paragraph" cols="50" rows="3" placeholder="Write your thoughts !" value="paragraph" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required></textarea>
+					
+				<label for="gender">Gender:</label>
+					<select name="gender" id="gender" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)"required>
+						<option value="Gender">Gender</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+						<option value="Prefer not to mention">Prefer not to mention</option>
+					</select>
+				</div>
+				<button type="submit" id="submit" onclick="generateOutput()">Submit</button>  
+				
+				<button type="reset" id="reset" onclick="location.reload()">Reset</button> 
+			</fieldset>
+		</form>
+	<br>
+	<hr>
+	<div id="userInfo">
+		<h2>User Information:<h2>
+		<hr>
+		<p id="output"></p>
+	</div>
+		<script>
+			const firstname = document.getElementById("firstname").value,
+				lastname = document.getElementById("lastname").value;
+				email = document.getElementById("email").value,
+				username = document.getElementById("username").value,
+				password = document.getElementById("password").value,
+				address = document.getElementById("address").value,
+				paragraph = document.getElementById("paragraph").value,
+				gender = document.getElementById("gender").value;	
+					
+			function onBlurInput(input) {
+				if (input.value == ""){
+					input.style.border= "2px solid red";
+				}
+			}
+			function onFocusBorder(input) {
+				if (input.value.trim != ""){
+					input.style.border = "2px solid green";
+				}
+			}
+
+			function generateOutput() {
+				document.getElementById("output").innerHTML = "Name: " + firstname + " " + lastname + "<br>" + "Email: " + email + "<br>" + "Username: " + username + "<br>" +  
+				"Password: " + password + "<br>" + "Address: " + address + "<br>" + "Paragraph: " + paragraph + "<br>" + "Gender: " + gender + "<br>" ;
+			}
+			
+			// Didn't call a function for reset because "location.reload" was used to reset all inputs of the user.  
+		</script>
+</body>
+</html>
+
+
